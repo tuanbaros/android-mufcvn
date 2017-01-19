@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <gradient
+        android:centerColor="@color/vmax_cta_not_selected"
+        android:endColor="@color/vmax_cta_not_selected"
+        android:startColor="@color/vmax_cta_not_selected" />
+
+
+</shape>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VmaxAdView">
+        <attr name="vmax_adspot_id" format="string" />
+        <attr name="vmax_UX_type" format="integer" />
+    </declare-styleable>
+
+</resources>
