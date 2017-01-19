@@ -1,0 +1,151 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:context="com.vmax.android.ads.vast.VideoAd">
+
+    <FrameLayout
+        android:id="@+id/fl_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_video_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/vv_vast_video"
+        android:layout_gravity="left|bottom"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/progressCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/skipLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/vv_vast_video"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_close_button_bg1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/vmax_inline_bg" />
+
+        <ImageView
+            android:id="@+id/iv_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/vmax_inline_skip" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/skipdelayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="right|bottom"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_close_button_bg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/vmax_inline_bg" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/vmax_skipbg" />
+
+        <ProgressBar
+            android:id="@+id/mediacontroller_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressDrawable="@drawable/vmax_video_progress_drawable" />
+
+        <TextView
+            android:id="@+id/tv_skip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/smallscreenLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="40dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_vmax_smallscreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/vmax_minimize_icon" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fullscreenLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|bottom"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_vmax_fullscreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/vmax_fullscreen_icon" />
+
+    </FrameLayout>
+
+
+</FrameLayout>

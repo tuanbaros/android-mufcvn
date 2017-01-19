@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    useLibrary  'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "amb.app.mufcvn"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 5
+        versionName "1.0.5"
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+}
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'com.github.ksoichiro:android-observablescrollview:1.5.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:support-v4:24.2.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile files('libs/android-support-design.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/apache-mime4j-0.6.jar')
+    compile project(':facebook')
+    compile files('libs/notification-hubs-0.3.jar')
+    compile files('libs/notifications-1.0.1.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/libandroid20150626.jar')
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.google.firebase:firebase-ads:9.4.0'
+    compile 'com.google.firebase:firebase-messaging:9.4.0'
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.google.android.gms:play-services-plus:9.4.0'
+    compile files('libs/vmax.jar')
+}
+apply plugin: 'com.google.gms.google-services'

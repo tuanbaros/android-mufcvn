@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "287681441309",
+    "firebase_url": "https://mufcvn-1327.firebaseio.com",
+    "project_id": "mufcvn-1327",
+    "storage_bucket": "mufcvn-1327.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287681441309:android:faded8445adbf125",
+        "android_client_info": {
+          "package_name": "amb.app.mufcvn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287681441309-pidicir5fkna7pbrier9sgaakj5sksle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "amb.app.mufcvn",
+            "certificate_hash": "9A072F8B12D2EAFCEE5292FAFE586BA3DD325C46"
+          }
+        },
+        {
+          "client_id": "287681441309-q8qfvr3cq51acpkmq5jf8i881gfib618.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt49WHLHxQTPM4aYdHSD8hoNwmMShshl0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287681441309-oqi3pf24udinr3gteb4dg48s11iq8dg6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Amb.app.DynamicLink"
+              }
+            },
+            {
+              "client_id": "287681441309-q8qfvr3cq51acpkmq5jf8i881gfib618.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

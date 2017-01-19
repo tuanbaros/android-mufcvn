@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="amb.mufcvn.activity"
+    android:versionCode="4"
+    android:versionName="1.0.4">
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="amb.mufcvn.activity.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="tuannt.mufcvn.activity.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="amb.mufcvn.activity.MyApplication"
+
+        android:icon="@drawable/icon_mufc"
+        android:label="MUFCVN"
+        android:theme="@style/AppBaseTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/appId" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--<activity-->
+        <!--android:name=".MainActivity"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="amb.mufcvn.activity.ListCategoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="amb.mufcvn.activity.LoadingActivity"
+
+            android:label="MUFCVN"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--deeplink-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app.mufcvn.vn"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <!-- handle app links -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="mufcvn.com" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="amb.mufcvn.activity.MainActivity"
+            android:label="mufcvn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.ReadingActivity"
+            android:label="mufcvn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.SearchActivity"
+            android:label="@string/title_activity_se"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.BookmarkActivity"
+            android:label="@string/title_activity_account"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.IntroActivity"
+            android:label="@string/title_activity_account"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.ReadingBookMarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="amb.mufcvn.activity.CommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="amb.mufcvn.activity.PushNotificationActivity"
+            android:screenOrientation="portrait">
+
+            <!--deeplink-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="mufcvn.vn"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="amb.mufcvn.activity.SlideImageActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity
+            android:name="amb.mufcvn.activity.PushComment"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="tuannt.mufcvn.activity" />
+            </intent-filter>
+        </receiver>
+        <!--Include the AdActivity configChanges and theme. ads admob-->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <!-- ads amobi-->
+        <meta-data
+            android:name="vn.amobi.util.ads.widget_id"
+            android:value="0f47bce2d4957111aeee4b959723d783"></meta-data>
+
+        <activity android:name="amb.mufcvn.activity.SettingPushActivity"></activity>
+        <!--Vauliton sdk tracking-->
+
+        <service
+            android:name="amb.mufcvn.mediasever.SongService"
+            android:exported="true"
+            android:enabled="true"/>
+
+        <receiver android:name="amb.mufcvn.mediasever.NotificationBroadcast" >
+            <intent-filter>
+                <action android:name="amb.mufcvn.audioplayer.delete" />
+                <action android:name="amb.mufcvn.audioplayer.pause" />
+                <action android:name="amb.mufcvn.audioplayer.next" />
+                <action android:name="amb.mufcvn.audioplayer.play" />
+                <action android:name="com.tutorialsface.audioplayer.previous" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

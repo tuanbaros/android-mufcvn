@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vmax_white">#FFFFFF</color>
+    <color name="vmax_black">#000000</color>
+    <color name="vmax_dark_gray">#7F7F7F</color>
+    <color name="vmax_cta_not_selected">#5FB74B</color>
+    <color name="vmax_cta_selected">#5FB74B</color>
+    
+</resources>
